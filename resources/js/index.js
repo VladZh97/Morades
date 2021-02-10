@@ -11,8 +11,6 @@ window.addEventListener('load', function() {
   html.style.overflowY = 'auto';
 })
 
-AOS.init();
-
 
 const headerTitle = document.querySelector('.header__title');
 const headerSubTitle = document.querySelector('.header__title-sub');
@@ -190,3 +188,29 @@ arrowUp.addEventListener('click', function() {
 })
 
 window.addEventListener('scroll', scrollTop)
+
+
+// EXPAND MENU
+
+const menuExpandButton = document.querySelector('#menu-item-186')
+const menuExpand = document.querySelector('.sub-menu')
+
+const menuVisible = () => {
+    menuExpand.classList.toggle('active')
+    menuExpandButton.classList.toggle('active')
+}
+
+menuExpandButton.addEventListener('click', menuVisible)
+
+window.addEventListener('mouseup', function(e){
+    if (e.target != menuExpand && e.target.parentNode != menuExpand){
+        menuExpand.classList.remove('active')
+        menuExpandButton.classList.remove('active')
+    }
+});
+
+
+if(document.body.classList.contains('single')) {
+    const singleContainer = document.querySelector('.single-page__inner');
+    singleContainer.scrollIntoView();
+}

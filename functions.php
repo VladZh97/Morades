@@ -14,8 +14,6 @@ add_action( 'init', 'register_my_menus' );
 function include_my_scripts() {
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
-  wp_enqueue_script('fancybox', get_stylesheet_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), null, true);
-  wp_enqueue_script('owlcarousel', get_stylesheet_directory_uri() . '/assets/js/owl.carousel.min.js', array(), '1.0.0', true);
   
   }
   

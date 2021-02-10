@@ -16,7 +16,7 @@
             <?php if( have_rows('realisations__items') ): ?>
                 <div class="realisations__items">
                     <?php while( have_rows('realisations__items') ): the_row(); ?>
-                        <div class="realisations__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="realisations__item">
                             <h3 class="realisations__item-title"><?php the_sub_field('realisation__item-title')?></h3>
                             <p class="realisations__item-text"><?php the_sub_field('realisation__item-text')?></p>
                         
